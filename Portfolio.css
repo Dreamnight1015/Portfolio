@@ -20,6 +20,25 @@
 ul, li{
     list-style: none;
 }
+a{
+    text-decoration: none;
+    color: black;
+}
+.nav{
+    display: flex;
+    left: 30%;
+    font-size: 25px;
+    position:absolute;
+    z-index: 50000;
+    display: none;
+}
+.nav li{
+    display: flex;
+    width: 200px;
+    height: 70px;
+    justify-content: center;
+    align-items: center;
+}
 .portfolioslick{
     height: 100vh;
     overflow: hidden;
@@ -41,32 +60,36 @@ ul, li{
 }
 
 .index .indexmain{
-    margin: 150px 0 0 0;
+    margin: 200px 0 0 0;
     text-align: center;
     font-size: 100px;
 }
-.index .indexsub{
-    padding: 75px 0 0 0;
+.indexsub{
+    top: 30%;
     font-size: 30px;
     width: 210px;
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
-    margin: 0 auto;
+    position: fixed;
+    z-index: 50000;
 }
 
-.index .indexsub li{
+.indexsub li{
     margin: 10px 0;
     display: flex;
     cursor: pointer;
 }
-.index .indexsub li .indexls{
+.indexsub li .indexls{
     font-size: 25px;
     padding: 0 10px 0 0;
     text-align: center;
     opacity: 0;
 }
-.index .indexsub li:hover .indexls{
+.indexsub li:nth-child(1) .indexls{
+    opacity: 1;
+}
+.indexsub li:hover .indexls{
     opacity: 1;
 }
 .index .scroll{
@@ -91,22 +114,20 @@ ul, li{
     position: relative;
 }
 .about .inner{
-    height: 60%;
     width: 60%;
     background: rgba(255,255,255,0.3);
     position:absolute;
     left: 20%;
-    top: 15%;
     padding: 20px 30px;
     border-radius: 20px;
 }
-.about .inner .title{
+.about .title{
     margin: 0 auto;
     font-size: 40px;
     text-align: center;
     letter-spacing: 10px;
-    padding: 0 0 20px 0;
     font-weight: 700;
+    padding: 180px 0 30px 0;
 }
 .about .inner .info{
     display: flex;
@@ -133,7 +154,219 @@ ul, li{
     position: relative;
 }
 .project .projectslick{
-    overflow: hidden;
     position: relative;
-    width: 75%;
+    margin: 0 auto;
+    width: 70%;
+    overflow: hidden;
+    background: rgba(255,255,255,0.3);
+    border-radius: 30px;
+}
+.project .title{
+    margin: 0 auto;
+    font-size: 40px;
+    text-align: center;
+    letter-spacing: 10px;
+    font-weight: 700;
+    padding: 170px 0 30px 0;
+}
+.project .projectslick .project1{
+    display: flex;
+    gap: 30px;
+    width: 100%;
+    padding: 20px 30px;
+    align-items: center;
+}
+.project .projectslick .projectimage{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 500px;
+    flex-direction: column;
+}
+.project .projectslick .project1 .pimage{
+    width: 400px;
+    height: 500px;
+    overflow: hidden;
+    object-fit: cover;
+    object-position: top;
+    border-radius: 20px;
+}
+.project .projectslick .project1 .buttons{
+    display: flex;
+    padding: 20px 0 0 0;
+    gap: 20px;
+}
+.project .projectslick .project1 .buttons .button{
+    padding: 10px 10px;
+    background: #FFF;
+    border-radius: 15px;
+    cursor: pointer;
+}
+.project .projectslick .project1 .buttons .button:nth-child(1){
+    background: #000;
+    color: #FFF;
+}
+.project .projectslick .info{
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+.project .projectslick .project1 .item{
+    font-size: 35px;
+    font-weight: 500;
+    display: flex;
+    flex-direction: column;
+}
+.project .projectslick .project1 .item span{
+    font-size: 20px;
+    word-break: keep-all;
+}
+.project .projectslick .project1 .item .color{
+    display: flex;
+    gap: 10px;
+}
+.project .projectslick .project1 .item .minicolor1{
+    width: 50px;
+    height: 50px;
+    border-radius: 90px;
+    background: #03FC5D;
+    border: 2px solid #FFF;
+}
+.project .projectslick .project1 .item .minicolor2{
+    width: 50px;
+    height: 50px;
+    border-radius: 90px;
+    background: #202020;
+    border: 2px solid #FFF;
+}
+.project .projectslick .project1 .item .minicolor3{
+    width: 50px;
+    height: 50px;
+    border-radius: 90px;
+    background: #121212;
+    border: 2px solid #FFF;
+}
+.project .projectslick .project1 .item .minicolor4{
+    width: 50px;
+    height: 50px;
+    border-radius: 90px;
+    background: #839EFF;
+    border: 2px solid #FFF;
+}
+.project .projectslick .info a{
+    margin: 10px 0 0 0;
+    padding: 10px;
+    border: 1px solid #FFF;
+    width: 120px;
+    text-align: center;
+    font-weight: 500;
+}
+.project .projectslick .info a:hover{
+    background: #FFF;
+    transition: 1s;
+}
+.project .projectslick .project2{
+    display: flex;
+    gap: 30px;
+    width: 100%;
+    padding: 20px 30px;
+    align-items: center;
+}
+.project .projectslick .project2 .pimage{
+    width: 400px;
+    height: 225px;
+    overflow: hidden;
+    object-fit: fill;
+    object-position: top;
+    border-radius: 20px;
+}
+.project .projectslick .project2 .buttons{
+    display: flex;
+    padding: 20px 0 0 0;
+    gap: 20px;
+}
+.project .projectslick .project2 .buttons .button{
+    padding: 10px 10px;
+    background: #FFF;
+    border-radius: 15px;
+    cursor: pointer;
+}
+.project .projectslick .project2 .buttons .button:nth-child(1){
+    background: #000;
+    color: #FFF;
+}
+.project .projectslick .project2 .item{
+    font-size: 35px;
+    font-weight: 500;
+    display: flex;
+    flex-direction: column;
+}
+.project .projectslick .project2 .item span{
+    font-size: 20px;
+    word-break: keep-all;
+}
+.project .projectslick .project2 .item .color{
+    display: flex;
+    gap: 10px;
+}
+.project .projectslick .project2 .item .minicolor1{
+    width: 50px;
+    height: 50px;
+    border-radius: 90px;
+    background: #121212;
+    border: 2px solid #FFF;
+}
+.project .projectslick .project2 .item .minicolor2{
+    width: 50px;
+    height: 50px;
+    border-radius: 90px;
+    background: #839EFF;
+    border: 2px solid #FFF;
+}
+.project .projectslick .project2 .item .minicolor3{
+    width: 50px;
+    height: 50px;
+    border-radius: 90px;
+    background: #121212;
+    border: 2px solid #FFF;
+}
+.project .projectslick .project2 .item .minicolor4{
+    width: 50px;
+    height: 50px;
+    border-radius: 90px;
+    background: #839EFF;
+    border: 2px solid #FFF;
+}
+.contact{
+    width: 100%;
+    height: 100vh;
+}
+.contact .inner{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 800px;
+    height: 800px;
+    background: rgba(255,255,255,0.3);
+    border-radius: 500px;
+    margin: 100px auto;
+}
+.contact .inner .title{
+    margin: 0 auto;
+    font-size: 40px;
+    text-align: center;
+    letter-spacing: 10px;
+    font-weight: 700;
+}
+.contact .inner .item{
+    padding: 10px 0;
+    font-size: 35px;
+    display: flex;
+    justify-content: center;
+    font-weight: 500;
+}
+.contact .inner .item span{
+    padding: 0 0 0 30px;
+    font-weight: 300;
 }
