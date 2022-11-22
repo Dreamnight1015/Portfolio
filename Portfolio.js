@@ -15,6 +15,16 @@ $(document).ready(function(){
         arrows: false,
         dots: false,
         verticalSwiping: true,
-        draggable : true
+        draggable : true,
+        infinite: false
+    })
+    $('.projectslick').slick({
+        rows: 1,
+        slidesToShow: 1,
+        slidesToScroll: 1,
+        arrows: true,
+        dots: true,
+        draggable : true,
+        infinite: true
     })
 });
