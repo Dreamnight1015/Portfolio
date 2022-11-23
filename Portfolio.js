@@ -13,13 +13,24 @@ $(document).ready(function(){
         slidesToShow: 1,
         slidesToScroll: 1,
         arrows: false,
-        dots: false,
         verticalSwiping: true,
+        speed: 1000,
         draggable : true,
         infinite: false,
-        pauseOnHover:false,
-        pauseOnFocus: false,
+        dots: true,
+        customPaging: function(slider, i) { 
+            console.log($(slider.$slides[i]).html());
+            return '<button class="tab">' + $(slider.$slides[i]).find('.item').attr('data-dot-title') + '</button>';
+        }
     })
+    $('.portfolioslick').mousewheel(function(e) {
+        e.preventDefault();
+        if (e.deltaY < 0) {
+            $(this).slick('slickNext');
+        }else {
+        $(this).slick('slickPrev');
+        }
+    });
     $('.project .projectslick .project1 .buttons .button:nth-child(1)').click(function(){
         $(this).css('background','#000');
         $(this).css('color','#FFF');
