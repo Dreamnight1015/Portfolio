@@ -86,7 +86,7 @@ a{
     text-align: center;
     letter-spacing: 10px;
     font-weight: 700;
-    padding: 180px 0 30px 0;
+    padding: 115px 0 30px 0;
 }
 .about .inner .info{
     display: flex;
@@ -126,7 +126,7 @@ a{
     text-align: center;
     letter-spacing: 10px;
     font-weight: 700;
-    padding: 170px 0 30px 0;
+    padding: 115px 0 30px 0;
 }
 .project .projectslick .project1{
     display: flex;
@@ -285,7 +285,7 @@ a{
     height: 800px;
     background: rgba(255,255,255,0.3);
     border-radius: 500px;
-    margin: 100px auto;
+    margin: 55px auto;
 }
 .contact .inner .title{
     margin: 0 auto;
