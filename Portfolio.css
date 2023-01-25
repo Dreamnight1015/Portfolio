@@ -272,6 +272,26 @@ a{
     background: #839EFF;
     border: 2px solid #FFF;
 }
+.project .projectslick .WidthBannerDesign{
+    display: flex;
+    gap: 30px;
+    width: 100%;
+    padding: 20px 30px;
+    align-items: center;
+}
+.project .projectslick .WidthBannerDesign a{
+    height: 120px;
+    width: 31.5%;
+    margin: 10px;
+    background-size: cover;
+    background-position: center top;
+    border: 1px solid #ddd;
+}
+.project .projectslick .WidthBannerDesign a .image{
+    width: 100%;
+    height: 120px;
+    object-fit: fill;
+}
 .contact{
     width: 100%;
     height: 100vh;
