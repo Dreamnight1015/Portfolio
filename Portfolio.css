@@ -8,13 +8,15 @@
 @import url('https://fonts.googleapis.com/css2?family=Manrope:wght@200;300;400;500;600;700;800&display=swap');
 /* Ars Maquette 폰트 */
 @import url('https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
 *{
     box-sizing: border-box;
     padding: 0;
     margin: 0;
 }
 :root{
-    font-family: 'Manrope', sans-serif;
+    font-family: 'Montserrat', sans-serif;
     color: #000;
 }
 ul, li{
@@ -29,10 +31,7 @@ a{
     overflow: hidden;
     position: relative;
     width: 100vw;
-}
-.slick-slide{
-    width: 100%;
-    background: linear-gradient(to right, #fbc2eb, #a6c1ee);
+    background: rgb(249,249,249);
 }
 .index{
     width: 100%;
@@ -42,11 +41,24 @@ a{
     justify-content: center;
     align-items: center;
     position: relative;
+    background: url("./프로젝트이미지/img.jpg");
 }
-
+.index .header{
+    position: absolute;
+    top: 5%;
+    left: 15%;
+    display: flex;
+    justify-content: space-between;
+    width: 70%;
+}
+.index .header span{
+    font-size: 22px;
+}
 .index .indexmain{
-    text-align: center;
-    font-size: 100px;
+    text-align: left;
+    position: absolute;
+    left: 15%;
+    top: 40%;
 }
 .index .scroll{
     padding: 100px 0 0 0;
@@ -71,14 +83,18 @@ a{
     width: 100%;
     height: 100vh;
     position: relative;
+    background: rgb(249,249,249);
 }
+
 .about .inner{
     width: 60%;
-    background: rgba(255,255,255,0.3);
+    top: 10%;
     position:absolute;
     left: 20%;
-    padding: 20px 30px;
     border-radius: 20px;
+    display: flex;
+    gap: 30px;
+    justify-content: center;
 }
 .about .title{
     margin: 0 auto;
@@ -88,24 +104,76 @@ a{
     font-weight: 700;
     padding: 115px 0 30px 0;
 }
+.ocean { 
+    height: 5%;
+    width:100%;
+    position:absolute;
+    bottom:0;
+    left:0;
+    background: #015871;
+  }
+  
+  .wave {
+    background: url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/85486/wave.svg) repeat-x; 
+    position: absolute;
+    top: -198px;
+    width: 6400px;
+    height: 198px;
+    animation: wave 7s cubic-bezier( 0.36, 0.45, 0.63, 0.53) infinite;
+    transform: translate3d(0, 0, 0);
+  }
+  
+  .wave:nth-of-type(2) {
+    top: -175px;
+    animation: wave 7s cubic-bezier( 0.36, 0.45, 0.63, 0.53) -.125s infinite, swell 7s ease -1.25s infinite;
+    opacity: 1;
+  }
+  
+  @keyframes wave {
+    0% {
+      margin-left: 0;
+    }
+    100% {
+      margin-left: -1600px;
+    }
+  }
+  
+  @keyframes swell {
+    0%, 100% {
+      transform: translate3d(0,-25px,0);
+    }
+    50% {
+      transform: translate3d(0,5px,0);
+    }
+  }
 .about .inner .info{
     display: flex;
-    flex-direction: column;
-    gap: 30px;
-}
-.about .inner .info .item{
-    font-size: 30px;
-    font-weight: 700;
-}
-.about .inner .info .item span{
-    font-weight: 500;
-    font-size: 25px;
-    margin: 0 0 0 30px;
+    gap: 100px;
+    align-items: center;
 }
 .about .inner .info .item p{
-    font-size: 20px;
+    font-size: 50px;
     font-weight: 300;
-    margin: 0 0 0 30px;
+    border-bottom: 12px solid #839EFF;
+    width: 250px;
+}
+.about .inner .info .item .span{
+    font-weight: 100;
+    font-size: 30px;
+    margin: 20px 0 0 0;
+}
+.about .inner .info .item .titles{
+    font-size: 30px;
+    margin: 25px 0 10px 0;
+    font-weight: 300;
+}
+.about .inner .info .item .titlestext{
+    font-size: 16px;
+}
+.about .inner .aboutimage{
+    width: 450px;
+    height: 600px;
+    border-radius: 20px;
 }
 .project{
     width: 100%;
@@ -115,25 +183,17 @@ a{
 .project .projectslick{
     position: relative;
     margin: 0 auto;
-    width: 70%;
+    width: 100%;
+    height: 100vh;
     overflow: hidden;
-    background: rgba(255,255,255,0.3);
-    border-radius: 30px;
-}
-.project .title{
-    margin: 0 auto;
-    font-size: 40px;
-    text-align: center;
-    letter-spacing: 10px;
-    font-weight: 700;
-    padding: 115px 0 30px 0;
 }
 .project .projectslick .project1{
     display: flex;
     gap: 30px;
     width: 100%;
-    padding: 20px 30px;
+    height: 100vh;
     align-items: center;
+    background: url("./프로젝트이미지/화면\ 캡처\ 2023-02-02\ 201634.png");
 }
 .project .projectslick .projectimage{
     display: flex;
@@ -167,110 +227,274 @@ a{
 }
 .project .projectslick .info{
     display: flex;
-    flex-direction: column;
-    gap: 15px;
+    gap: 50px;
+    position: absolute;
+    width: 80%;
+    left: 6%;
+    align-items: center;
 }
-.project .projectslick .project1 .item{
-    font-size: 30px;
-    font-weight: 700;
+.project .projectslick .info .left{
+    width: 800px;
+}
+.projectth{
+    font-size: 80px;
+    font-weight: 200;
+    margin: 0 0 40px 0;
+}
+.projectname{
+    font-size: 40px;
+    font-weight: 200;
     display: flex;
-    flex-direction: column;
+    align-items: center;
 }
-.project .projectslick .project1 .item span{
-    margin-left: 30px;
-    font-size: 25px;
-    word-break: keep-all;
-    font-weight: 500;
-}
-.project .projectslick .project1 .item .color{
+.projectname a{
+    border: 1px solid #BDBDBD;
+    font-size: 16px;
+    width: 70px;
+    height: 30px;
     display: flex;
-    gap: 10px;
+    justify-content: center;
+    font-weight: 400;
+    align-items: center;
+    margin: 0 0 0 30px;
 }
-.project .projectslick .info a{
-    margin: 10px 0 0 0;
-    padding: 10px;
-    border: 1px solid #FFF;
-    width: 120px;
-    text-align: center;
-    font-weight: 500;
-}
-.project .projectslick .info a:hover{
-    background: #FFF;
+.project1 .projectname a:hover{
+    border: 1px solid #03FC5D;
     transition: 1s;
+}
+.left .titles{
+    font-size: 25px;
+    font-weight: 300;
+    margin: 30px 0 20px 0;
+}
+.left .infobottom1{
+    font-size: 25px;
+    font-weight: 300;
+    margin: 30px 0 20px 0;
+    display: flex;
+}
+.left .infobottom2{
+    font-size: 25px;
+    font-weight: 300;
+    margin: 30px 0 20px 0;
+    display: flex;
+}
+.left .infotext{
+    font-size: 16px;
+    font-weight: 300;
+    word-break: keep-all;
+    display: flex;
+    align-items: center;
+    line-height: 30px;
+}
+.left .infotext p{
+    font-size: 20px;
+}
+.left .infobottom1 .part1{
+    width: 400px;
+}
+.left .infobottom1 .part2{
+    width: 400px;
+}
+.left .infobottom2 .part1{
+    width: 400px;
+}
+.left .infobottom2 .part2{
+    width: 400px;
+}
+.cbicon{
+    width: 40px;
+    height: 40px;
+    object-fit: cover;
+    margin: 0 5px 0 0;
+}
+.edge{
+    width: 32px;
+    height: 32px;
+    object-fit: cover;
+    margin: 0 5px 0 0;
+}
+.left .infotext .color{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 80px;
+    margin: 0 20px 0 0;
+}
+.left .infotext .color span{
+    margin: 10px 0 0 0;
+}
+.project1 .palette1{
+    background-color: #03FC5D;
+    display: inline-block;
+    width: 45px;
+    height: 45px;
+    border-radius: 15px;
+    box-shadow: 5px 5px 10px rgb(212 212 212), 5px 5px 5px inset rgb(255 255 255 / 50%), -5px -5px 5px inset rgb(0 0 0 / 10%);
+    position: relative;
+}
+.project1 .palette2{
+    background-color: #202020;
+    display: inline-block;
+    width: 45px;
+    height: 45px;
+    border-radius: 15px;
+    box-shadow: 5px 5px 10px rgb(212 212 212), 5px 5px 5px inset rgb(255 255 255 / 50%), -5px -5px 5px inset rgb(0 0 0 / 10%);
+    position: relative;
 }
 .project .projectslick .project2{
     display: flex;
     gap: 30px;
     width: 100%;
-    padding: 20px 30px;
+    height: 100vh;
     align-items: center;
+    background: url("./프로젝트이미지/ProjectB.png");
 }
-.project .projectslick .project2 .pimage{
+.project .projectslick .projectimage{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 500px;
+    flex-direction: column;
+}
+.project .projectslick .project1 .pimage{
     width: 400px;
-    height: 225px;
+    height: 500px;
     overflow: hidden;
-    object-fit: fill;
+    object-fit: cover;
     object-position: top;
     border-radius: 20px;
 }
-.project .projectslick .project2 .buttons{
+.project .projectslick .project1 .buttons{
     display: flex;
     padding: 20px 0 0 0;
     gap: 20px;
 }
-.project .projectslick .project2 .buttons .button{
+.project .projectslick .project1 .buttons .button{
     padding: 10px 10px;
     background: #FFF;
     border-radius: 15px;
     cursor: pointer;
 }
-.project .projectslick .project2 .buttons .button:nth-child(1){
+.project .projectslick .project1 .buttons .button:nth-child(1){
     background: #000;
     color: #FFF;
 }
-.project .projectslick .project2 .item{
-    font-size: 30px;
-    font-weight: 700;
+.project .projectslick .info{
+    display: flex;
+    gap: 50px;
+    position: absolute;
+    width: 80%;
+    left: 6%;
+    align-items: center;
+}
+.project .projectslick .info .left{
+    width: 800px;
+}
+.projectth{
+    font-size: 80px;
+    font-weight: 200;
+    margin: 0 0 40px 0;
+}
+.projectname{
+    font-size: 40px;
+    font-weight: 200;
+    display: flex;
+    align-items: center;
+}
+.projectname a{
+    border: 1px solid #BDBDBD;
+    font-size: 16px;
+    width: 70px;
+    height: 30px;
+    display: flex;
+    justify-content: center;
+    font-weight: 400;
+    align-items: center;
+    margin: 0 0 0 30px;
+}
+.project2 .projectname a:hover{
+    border: 1px solid #839EFF;
+    transition: 1s;
+}
+.left .titles{
+    font-size: 25px;
+    font-weight: 300;
+    margin: 30px 0 20px 0;
+}
+.left .infobottom1{
+    font-size: 25px;
+    font-weight: 300;
+    margin: 30px 0 20px 0;
+    display: flex;
+}
+.left .infobottom2{
+    font-size: 25px;
+    font-weight: 300;
+    margin: 30px 0 20px 0;
+    display: flex;
+}
+.left .infotext{
+    font-size: 16px;
+    font-weight: 300;
+    word-break: keep-all;
+    display: flex;
+    align-items: center;
+    line-height: 30px;
+}
+.left .infobottom1 .part1{
+    width: 400px;
+}
+.left .infobottom1 .part2{
+    width: 400px;
+}
+.left .infobottom2 .part1{
+    width: 400px;
+}
+.left .infobottom2 .part2{
+    width: 400px;
+}
+.cbicon{
+    width: 40px;
+    height: 40px;
+    object-fit: cover;
+    margin: 0 5px 0 0;
+}
+.edge{
+    width: 32px;
+    height: 32px;
+    object-fit: cover;
+    margin: 0 5px 0 0;
+}
+.left .infotext .color{
     display: flex;
     flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 80px;
+    margin: 0 20px 0 0;
 }
-.project .projectslick .project2 .item span{
-    margin-left: 30px;
-    font-size: 25px;
-    word-break: keep-all;
-    font-weight: 500;
+.left .infotext .color span{
+    margin: 10px 0 0 0;
 }
-.project .projectslick .project2 .item .color{
-    display: flex;
-    gap: 10px;
+.project2 .palette1{
+    background-color: #839EFF;
+    display: inline-block;
+    width: 45px;
+    height: 45px;
+    border-radius: 15px;
+    box-shadow: 5px 5px 10px rgb(212 212 212), 5px 5px 5px inset rgb(255 255 255 / 50%), -5px -5px 5px inset rgb(0 0 0 / 10%);
+    position: relative;
 }
-.project .projectslick .project2 .item .minicolor1{
-    width: 50px;
-    height: 50px;
-    border-radius: 90px;
-    background: #121212;
-    border: 2px solid #FFF;
-}
-.project .projectslick .project2 .item .minicolor2{
-    width: 50px;
-    height: 50px;
-    border-radius: 90px;
-    background: #839EFF;
-    border: 2px solid #FFF;
-}
-.project .projectslick .project2 .item .minicolor3{
-    width: 50px;
-    height: 50px;
-    border-radius: 90px;
-    background: #121212;
-    border: 2px solid #FFF;
-}
-.project .projectslick .project2 .item .minicolor4{
-    width: 50px;
-    height: 50px;
-    border-radius: 90px;
-    background: #839EFF;
-    border: 2px solid #FFF;
+.project2 .palette2{
+    background-color: #D9D9D9;
+    display: inline-block;
+    width: 45px;
+    height: 45px;
+    border-radius: 15px;
+    box-shadow: 5px 5px 10px rgb(212 212 212), 5px 5px 5px inset rgb(255 255 255 / 50%), -5px -5px 5px inset rgb(0 0 0 / 10%);
+    position: relative;
 }
 .project .projectslick .WidthBannerDesign{
     display: flex;
@@ -292,27 +516,49 @@ a{
     height: 120px;
     object-fit: fill;
 }
+.project .projectslick .SNStitle{
+    width: 100%;
+    font-size: 80px;
+    font-weight: 200;
+    margin: 65px 0 0 0;
+}
+.project .projectslick .SNSscreen{
+    background: url("./프로젝트이미지/SNS.png");
+    width: 100%;
+    height: 100vh;
+    background-size: contain;
+}
 .project .projectslick .SNSDesign{
     display: flex;
     gap: 30px;
-    width: 100%;
-    padding: 20px 30px;
+    width: 70%;
     align-items: center;
     flex-flow: row wrap;
+    position: absolute;
+    left: 15%;
     justify-content: space-between;
 }
 .project .projectslick .SNSDesign a{
-    height: 250px;
-    width: 250px;
+    height: 300px;
+    width: 300px;
     margin: 10px;
     background-size: cover;
     background-position: center top;
     border: 1px solid #ddd;
+    overflow:hidden;
 }
 .project .projectslick .SNSDesign a .image{
-    width: 250px;
-    height: 250px;
+    width: 300px;
+    height: 300px;
     object-fit: fill;
+    transition: all 0.5s linear;
+}
+.project .projectslick .SNSDesign a .image:hover{
+    transform: scale(1.05);
+}
+.secondfloor {
+    display: flex;
+    gap: 85px;
 }
 .contact{
     width: 100%;
@@ -348,8 +594,12 @@ a{
     font-weight: 300;
 }
 .slick-dots{
+    width: 70%;
+    display: flex;
     position: absolute;
-    top:30%;
+    top: 1%;
+    left: 15%;
+    justify-content: space-between;
 }
 .slick-dots > li{
     margin: 30px 0 0 40px;
@@ -357,14 +607,40 @@ a{
 .slick-dots .tab{
     border: none;
     background: none;
-    font-size: 25px;
+    font-size: 18px;
     cursor: pointer;
 }
+.slick-dots .tab{
+    display: none;
+}
 .slick-dots .tab:hover{
-    color: white;
-    transition: 0.2s;
+
 }
 .slick-dots li.slick-active button{
-    color: white;
-    transition: 0.5s;
+
+}
+.typing{
+    height: 55px;
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-end;
+    font-size: 1.8rem;
+}
+
+.text {
+    width: 100%;
+    font-size: 35px;
+    font-weight: 100;
+}
+
+.text::after {
+    content: '';
+    margin-left: .4rem;
+    border-right: 2px solid #777;
+    animation: cursor .9s infinite steps(2);
+}
+
+@keyframes cursor {
+    from { border-right: 2px solid #222; }
+    to { border-right: 2px solid rgb(214, 214, 214); }
 }
