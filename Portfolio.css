@@ -45,7 +45,7 @@ a{
 }
 .index .header{
     position: absolute;
-    top: 5%;
+    top: 10%;
     left: 15%;
     display: flex;
     justify-content: space-between;
@@ -193,7 +193,13 @@ a{
     width: 100%;
     height: 100vh;
     align-items: center;
-    background: url("./프로젝트이미지/화면\ 캡처\ 2023-02-02\ 201634.png");
+}
+.project .projectslick .project2{
+    display: flex;
+    gap: 30px;
+    width: 100%;
+    height: 100vh;
+    align-items: center;
 }
 .project .projectslick .projectimage{
     display: flex;
@@ -202,7 +208,7 @@ a{
     height: 500px;
     flex-direction: column;
 }
-.project .projectslick .project1 .pimage{
+.project .projectslick .project2 .pimage{
     width: 400px;
     height: 500px;
     overflow: hidden;
@@ -210,62 +216,94 @@ a{
     object-position: top;
     border-radius: 20px;
 }
-.project .projectslick .project1 .buttons{
+.project .projectslick .project1 .info{
     display: flex;
-    padding: 20px 0 0 0;
-    gap: 20px;
-}
-.project .projectslick .project1 .buttons .button{
-    padding: 10px 10px;
-    background: #FFF;
-    border-radius: 15px;
-    cursor: pointer;
-}
-.project .projectslick .project1 .buttons .button:nth-child(1){
-    background: #000;
-    color: #FFF;
-}
-.project .projectslick .info{
-    display: flex;
-    gap: 50px;
     position: absolute;
-    width: 80%;
-    left: 6%;
+    width: 90%;
+    height: 80vh;
+    left: 5%;
     align-items: center;
+    border: 1px solid #00a73d;
+    padding: 20px 50px;
+    justify-content: center;
+}
+.project .projectslick .project2 .pimage{
+    width: 400px;
+    height: 500px;
+    overflow: hidden;
+    object-fit: cover;
+    object-position: top;
+    border-radius: 20px;
+}
+.project .projectslick .project2 .info{
+    display: flex;
+    position: absolute;
+    width: 90%;
+    height: 80vh;
+    left: 5%;
+    align-items: center;
+    border: 1px solid #2c59ff;
+    padding: 20px 50px;
+    justify-content: center;
 }
 .project .projectslick .info .left{
-    width: 800px;
+    width: 600px;
 }
-.projectth{
-    font-size: 80px;
-    font-weight: 200;
-    margin: 0 0 40px 0;
+.project1 .projectth{
+    font-size: 30px;
+    font-weight: 500;
+    color: #00a73d;
+    margin: 28px 0 0 0;
+}
+.project2 .projectth{
+    font-size: 30px;
+    font-weight: 500;
+    color: #2c59ff;
+    margin: 28px 0 0 0;
 }
 .projectname{
-    font-size: 40px;
-    font-weight: 200;
+    font-size: 50px;
+    font-weight: 300;
     display: flex;
     align-items: center;
+    margin: 0 0 70px 0;
 }
-.projectname a{
-    border: 1px solid #BDBDBD;
+.project1 .projectname a{
+    border: 1px solid #00a73d;
     font-size: 16px;
     width: 70px;
     height: 30px;
     display: flex;
     justify-content: center;
-    font-weight: 400;
+    font-weight: 500;
     align-items: center;
     margin: 0 0 0 30px;
+    border-radius: 20px;
 }
 .project1 .projectname a:hover{
-    border: 1px solid #03FC5D;
+    background: #00a73d;
+    transition: 1s;
+}
+.project2 .projectname a{
+    border: 1px solid #2c59ff;
+    font-size: 16px;
+    width: 70px;
+    height: 30px;
+    display: flex;
+    justify-content: center;
+    font-weight: 500;
+    align-items: center;
+    margin: 0 0 0 30px;
+    border-radius: 20px;
+}
+.project2 .projectname a:hover{
+    background: #2c59ff;
     transition: 1s;
 }
 .left .titles{
     font-size: 25px;
-    font-weight: 300;
-    margin: 30px 0 20px 0;
+    font-weight: 500;
+    margin: 0 0 10px 0;
 }
 .left .infobottom1{
     font-size: 25px;
@@ -280,37 +318,35 @@ a{
     display: flex;
 }
 .left .infotext{
+    width: 500px;
     font-size: 16px;
-    font-weight: 300;
+    font-weight: 500;
     word-break: keep-all;
     display: flex;
     align-items: center;
-    line-height: 30px;
+    line-height: 25px;
 }
 .left .infotext p{
     font-size: 20px;
 }
 .left .infobottom1 .part1{
-    width: 400px;
+    width: 300px;
 }
 .left .infobottom1 .part2{
-    width: 400px;
+    width: 300px;
 }
 .left .infobottom2 .part1{
-    width: 400px;
-}
-.left .infobottom2 .part2{
-    width: 400px;
+    width: 600px;
 }
 .cbicon{
-    width: 40px;
-    height: 40px;
+    width: 30px;
+    height: 30px;
     object-fit: cover;
     margin: 0 5px 0 0;
 }
 .edge{
-    width: 32px;
-    height: 32px;
+    width: 27px;
+    height: 27px;
     object-fit: cover;
     margin: 0 5px 0 0;
 }
@@ -319,28 +355,41 @@ a{
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    width: 80px;
+    width: 100px;
     margin: 0 20px 0 0;
 }
 .left .infotext .color span{
-    margin: 10px 0 0 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
 }
 .project1 .palette1{
     background-color: #03FC5D;
     display: inline-block;
-    width: 45px;
-    height: 45px;
-    border-radius: 15px;
-    box-shadow: 5px 5px 10px rgb(212 212 212), 5px 5px 5px inset rgb(255 255 255 / 50%), -5px -5px 5px inset rgb(0 0 0 / 10%);
+    width: 100px;
+    height: 20px;
     position: relative;
 }
 .project1 .palette2{
     background-color: #202020;
     display: inline-block;
-    width: 45px;
-    height: 45px;
-    border-radius: 15px;
-    box-shadow: 5px 5px 10px rgb(212 212 212), 5px 5px 5px inset rgb(255 255 255 / 50%), -5px -5px 5px inset rgb(0 0 0 / 10%);
+    width: 100px;
+    height: 20px;
+    position: relative;
+}
+.project2 .palette1{
+    background-color: #839EFF;
+    display: inline-block;
+    width: 100px;
+    height: 20px;
+    position: relative;
+}
+.project2 .palette2{
+    background-color: #D9D9D9;
+    display: inline-block;
+    width: 100px;
+    height: 20px;
     position: relative;
 }
 .project .projectslick .project2{
@@ -349,7 +398,6 @@ a{
     width: 100%;
     height: 100vh;
     align-items: center;
-    background: url("./프로젝트이미지/ProjectB.png");
 }
 .project .projectslick .projectimage{
     display: flex;
@@ -357,29 +405,6 @@ a{
     align-items: center;
     height: 500px;
     flex-direction: column;
-}
-.project .projectslick .project1 .pimage{
-    width: 400px;
-    height: 500px;
-    overflow: hidden;
-    object-fit: cover;
-    object-position: top;
-    border-radius: 20px;
-}
-.project .projectslick .project1 .buttons{
-    display: flex;
-    padding: 20px 0 0 0;
-    gap: 20px;
-}
-.project .projectslick .project1 .buttons .button{
-    padding: 10px 10px;
-    background: #FFF;
-    border-radius: 15px;
-    cursor: pointer;
-}
-.project .projectslick .project1 .buttons .button:nth-child(1){
-    background: #000;
-    color: #FFF;
 }
 .project .projectslick .info{
     display: flex;
@@ -389,39 +414,9 @@ a{
     left: 6%;
     align-items: center;
 }
-.project .projectslick .info .left{
-    width: 800px;
-}
-.projectth{
-    font-size: 80px;
-    font-weight: 200;
-    margin: 0 0 40px 0;
-}
-.projectname{
-    font-size: 40px;
-    font-weight: 200;
-    display: flex;
-    align-items: center;
-}
-.projectname a{
-    border: 1px solid #BDBDBD;
-    font-size: 16px;
-    width: 70px;
-    height: 30px;
-    display: flex;
-    justify-content: center;
-    font-weight: 400;
-    align-items: center;
-    margin: 0 0 0 30px;
-}
 .project2 .projectname a:hover{
-    border: 1px solid #839EFF;
+    border: 1px solid #2c59ff;
     transition: 1s;
-}
-.left .titles{
-    font-size: 25px;
-    font-weight: 300;
-    margin: 30px 0 20px 0;
 }
 .left .infobottom1{
     font-size: 25px;
@@ -434,67 +429,6 @@ a{
     font-weight: 300;
     margin: 30px 0 20px 0;
     display: flex;
-}
-.left .infotext{
-    font-size: 16px;
-    font-weight: 300;
-    word-break: keep-all;
-    display: flex;
-    align-items: center;
-    line-height: 30px;
-}
-.left .infobottom1 .part1{
-    width: 400px;
-}
-.left .infobottom1 .part2{
-    width: 400px;
-}
-.left .infobottom2 .part1{
-    width: 400px;
-}
-.left .infobottom2 .part2{
-    width: 400px;
-}
-.cbicon{
-    width: 40px;
-    height: 40px;
-    object-fit: cover;
-    margin: 0 5px 0 0;
-}
-.edge{
-    width: 32px;
-    height: 32px;
-    object-fit: cover;
-    margin: 0 5px 0 0;
-}
-.left .infotext .color{
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    width: 80px;
-    margin: 0 20px 0 0;
-}
-.left .infotext .color span{
-    margin: 10px 0 0 0;
-}
-.project2 .palette1{
-    background-color: #839EFF;
-    display: inline-block;
-    width: 45px;
-    height: 45px;
-    border-radius: 15px;
-    box-shadow: 5px 5px 10px rgb(212 212 212), 5px 5px 5px inset rgb(255 255 255 / 50%), -5px -5px 5px inset rgb(0 0 0 / 10%);
-    position: relative;
-}
-.project2 .palette2{
-    background-color: #D9D9D9;
-    display: inline-block;
-    width: 45px;
-    height: 45px;
-    border-radius: 15px;
-    box-shadow: 5px 5px 10px rgb(212 212 212), 5px 5px 5px inset rgb(255 255 255 / 50%), -5px -5px 5px inset rgb(0 0 0 / 10%);
-    position: relative;
 }
 .project .projectslick .SNStitle{
     width: 100%;
@@ -583,20 +517,21 @@ a{
 .contact{
     width: 100%;
     height: 100vh;
+    background: url("./프로젝트이미지/Contact-us-2.jpg")
 }
 .contact .inner{
     display: flex;
     flex-direction: column;
     justify-content: center;
-    align-items: center;
+    /* align-items: center; */
     width: 800px;
     height: 800px;
-    background: rgba(255,255,255,0.3);
     border-radius: 500px;
-    margin: 55px auto;
+    position: absolute;
+    left: 30%;
 }
 .contact .inner .title{
-    margin: 0 auto;
+    margin: 0 0 40px 0;
     font-size: 40px;
     text-align: center;
     letter-spacing: 10px;
@@ -606,38 +541,38 @@ a{
     padding: 10px 0;
     font-size: 35px;
     display: flex;
-    justify-content: center;
+    justify-content: flex-start;
     font-weight: 500;
+    margin: 0 0 0 150px;
 }
 .contact .inner .item span{
     padding: 0 0 0 30px;
     font-weight: 300;
 }
 .slick-dots{
-    width: 70%;
+    width: 100%;
     display: flex;
     position: absolute;
-    top: 1%;
-    left: 15%;
+    top: 0%;
     justify-content: space-between;
+    padding: 0 290px;
+    background: rgba(236, 230, 204, 0.3);
 }
 .slick-dots > li{
-    margin: 30px 0 0 40px;
+    height: 60px;
+    display: flex;
 }
 .slick-dots .tab{
     border: none;
     background: none;
-    font-size: 18px;
+    font-size: 20px;
     cursor: pointer;
-}
-.slick-dots .tab{
-    display: none;
 }
 .slick-dots .tab:hover{
 
 }
 .slick-dots li.slick-active button{
-
+    color: #964B00;
 }
 .typing{
     height: 55px;
@@ -663,4 +598,22 @@ a{
 @keyframes cursor {
     from { border-right: 2px solid #222; }
     to { border-right: 2px solid rgb(214, 214, 214); }
+}
+.pjimage{
+    width: 850px;
+    height: 500px;
+    object-fit: fill;
+}
+.project2 .pjimage{
+    width: 700px;
+}
+.textsetting b{
+    font-size: 22px;
+    font-weight: 500;
+}
+.skillicon{
+    width: 40px;
+    height: 40px;
+    margin: 0 5px 0 0;
+    object-fit: cover;
 }
