@@ -158,6 +158,33 @@ $(document).ready(function(){
         $('.indexsub li:nth-child(3) .indexls').css('opacity','0');
         $('.indexsub li:nth-child(4) .indexls').css('opacity','0');
     })
+    $('.left .snsimages:nth-child(1)').click(function(){
+        $('.snsimage').css('opacity','0').stop().attr('src','./프로젝트이미지/SNS디자인/SNS디자인1.png').animate({opacity:1},1000);
+    })
+    $('.left .snsimages:nth-child(2)').click(function(){
+        $('.snsimage').css('opacity','0').stop().attr('src','./프로젝트이미지/SNS디자인/SNS디자인2.png').animate({opacity:1},1000);
+    })
+    $('.left .snsimages:nth-child(3)').click(function(){
+        $('.snsimage').css('opacity','0').stop().attr('src','./프로젝트이미지/SNS디자인/SNS디자인3.png').animate({opacity:1},1000);
+    })
+    $('.right .snsimages:nth-child(1)').click(function(){
+        $('.snsimage').css('opacity','0').stop().attr('src','./프로젝트이미지/SNS디자인/SNS디자인4.png').animate({opacity:1},1000);
+    })
+    $('.right .snsimages:nth-child(2)').click(function(){
+        $('.snsimage').css('opacity','0').stop().attr('src','./프로젝트이미지/SNS디자인/SNS디자인5.png').animate({opacity:1},1000);
+    })
+    $('.right .snsimages:nth-child(3)').click(function(){
+        $('.snsimage').css('opacity','0').stop().attr('src','./프로젝트이미지/SNS디자인/SNS디자인6.png').animate({opacity:1},1000);
+    })
+    $('.wbimages:nth-child(1)').click(function(){
+        $('.wbimage').css('opacity','0').stop().attr('src','./프로젝트이미지/가로배너디자인/네이버 목업 버즈.png').animate({opacity:1},1000);
+    })
+    $('.wbimages:nth-child(2)').click(function(){
+        $('.wbimage').css('opacity','0').stop().attr('src','./프로젝트이미지/가로배너디자인/네이버 목업 전독시.png').animate({opacity:1},1000);
+    })
+    $('.wbimages:nth-child(3)').click(function(){
+        $('.wbimage').css('opacity','0').stop().attr('src','./프로젝트이미지/가로배너디자인/네이버 목업 길리안.png').animate({opacity:1},1000);
+    })
     const $text = document.querySelector(".text");
 
 // 글자 모음 - 개행문자(\n)로 줄바꿈

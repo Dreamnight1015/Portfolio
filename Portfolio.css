@@ -87,14 +87,14 @@ a{
 }
 
 .about .inner{
-    width: 60%;
+    width: 90%;
     top: 10%;
     position:absolute;
-    left: 20%;
-    border-radius: 20px;
+    left: 5%;
     display: flex;
-    gap: 30px;
     justify-content: center;
+    border: 1px solid #839EFF;
+    align-items: center;
 }
 .about .title{
     margin: 0 auto;
@@ -150,22 +150,24 @@ a{
     display: flex;
     gap: 100px;
     align-items: center;
+    justify-content: center;
+    margin: 60px 0 60px 0;
 }
 .about .inner .info .item p{
     font-size: 50px;
-    font-weight: 300;
+    font-weight: 500;
     border-bottom: 12px solid #839EFF;
-    width: 250px;
+    width: 254px;
 }
 .about .inner .info .item .span{
-    font-weight: 100;
-    font-size: 30px;
+    font-weight: 300;
+    font-size: 25px;
     margin: 20px 0 0 0;
 }
 .about .inner .info .item .titles{
-    font-size: 30px;
-    margin: 25px 0 10px 0;
-    font-weight: 300;
+    font-size: 25px;
+    font-weight: 500;
+    margin: 20px 0 5px 0;
 }
 .about .inner .info .item .titlestext{
     font-size: 16px;
@@ -437,10 +439,10 @@ a{
     margin: 65px 0 0 0;
 }
 .project .projectslick .SNSscreen{
-    background: url("./프로젝트이미지/SNS.png");
+    background: url("./프로젝트이미지/제목\ 없음-6.png");
     width: 100%;
     height: 100vh;
-    background-size: contain;
+    background-size: cover;
 }
 .project .projectslick .SNSDesign{
     display: flex;
@@ -451,6 +453,7 @@ a{
     position: absolute;
     left: 15%;
     justify-content: space-between;
+    height: 100vh;
 }
 .project .projectslick .SNSDesign a{
     height: 300px;
@@ -477,20 +480,16 @@ a{
     margin: 65px 0 0 0;
 }
 .project .projectslick .widthbannerdesignscreen{
-    background: url("./프로젝트이미지/ProjectW.png");
     width: 100%;
     height: 100vh;
     background-size: fill;
+    background: url("./프로젝트이미지/제목\ 없음-7.png");
 }
 .project .projectslick .widthbannerdesign{
     display: flex;
-    gap: 30px;
-    width: 70%;
-    align-items: center;
-    flex-flow: row wrap;
+    width: 80%;
     position: absolute;
-    left: 15%;
-    justify-content: space-between;
+    left: 10%;
 }
 .project .projectslick .widthbannerdesign a{
     height: 170px;
@@ -532,14 +531,14 @@ a{
 }
 .contact .inner .title{
     margin: 0 0 40px 0;
-    font-size: 40px;
+    font-size: 30px;
     text-align: center;
     letter-spacing: 10px;
     font-weight: 700;
 }
 .contact .inner .item{
     padding: 10px 0;
-    font-size: 35px;
+    font-size: 25px;
     display: flex;
     justify-content: flex-start;
     font-weight: 500;
@@ -616,4 +615,105 @@ a{
     height: 40px;
     margin: 0 5px 0 0;
     object-fit: cover;
+}
+.snsmokup{
+    width: 28%;
+    position: absolute;
+    top: 10%;
+    left: 42.5%;
+}
+.snsimage{
+    background: url("./프로젝트이미지/SNS디자인/SNS디자인1.png");
+    position: absolute;
+    width: 310px;
+    left: 44.9%;
+    top: 34%;
+}
+.snsimages{
+    width: 150px;
+    height: 150px;
+    border: 2px solid black;
+    margin: 0 0 10px 0 ;
+}
+.snsimages:hover{
+    cursor: pointer;
+    border: 2px solid white;
+    transition: 0.5s;
+}
+.selectimage{
+    position: absolute;
+    right: 0%;
+    width: 350px;
+    height: 500px;
+    display: flex;
+    gap: 10px;
+}
+.selectimage .left{
+    width: 150px;
+    height: 500px;
+}
+.selectimage .right{
+    width: 150px;
+    height: 500px;
+    margin: 80px 0 0 0;
+}
+.snstitle{
+    font-size: 60px;
+    font-weight: 200;
+}
+.snsconcept{
+    width: 500px;
+    margin: 50px 0 0 0;
+    word-break: keep-all;
+    font-weight: 500;
+}
+.snstext{
+    position: absolute;
+    top: 20%;
+}
+.wbmokup{
+    top: -13%;
+    width: 60%;
+    position: absolute;
+    margin: 0 0 0 50px;
+}
+.wbtitle{
+    font-size: 50px;
+    font-weight: 300;
+    margin: 140px 0 0 0;
+}
+.widthbannerdesign .right{
+    width: 60%;
+}
+.widthbannerdesign .left{
+    width: 40%;
+}
+.wbtext{
+    word-break: keep-all;
+    margin: 50px 0 0 0;
+    font-weight: 500;
+}
+.wbimage{
+    width: 800px;
+    position: absolute;
+    left: 47.2%;
+    top: 51%;
+    height: 430px;
+}
+.wbimages{
+    width: 300px;
+    height: 80px;
+    border: 2px solid black;
+    z-index: 1000;
+}
+.wbimages:hover{
+    border: 2px solid white;
+    cursor: pointer;
+    transition: 0.5s;
+}
+.left .selectimage{
+    display: flex;
+    position: absolute;
+    left: 43%;
+    margin: 440px 0 0 0;
 }
